@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>唐山华夏中西医结合医院 - 用心守护您的健康</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- 自定义配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#165DFF', // 主色调（医疗蓝）
+                        secondary: '#36B37E', // 辅助色（健康绿）
+                        neutral: '#F5F7FA', // 背景色
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            }
+            .hover-scale {
+                transition: transform 0.3s ease;
+            }
+            .hover-scale:hover {
+                transform: scale(1.03);
+            }
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-white">
+    <!-- 导航栏 -->
+    <header class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <i class="fa-solid fa-hospital text-primary text-3xl"></i>
+                    <span class="text-xl font-bold text-primary">唐山华夏中西医结合医院</span>
+                </div>
+                
+                <!-- 桌面端导航 - 修改为左对齐 -->
+                <nav class="hidden md:flex space-x-8 justify-start">
+                    <a href="#home" class="text-gray-700 hover:text-primary font-medium">首页</a>
+                    <a href="#departments" class="text-gray-700 hover:text-primary font-medium">科室介绍</a>
+                    <a href="#appointment" class="text-gray-700 hover:text-primary font-medium">问诊时间</a>
+                    <a href="#recruitment" class="text-gray-700 hover:text-primary font-medium">招聘信息</a>
+                </nav>
+                
+                
+                <!-- 移动端菜单按钮 -->
+                <button id="menuBtn" class="md:hidden text-gray-700 hover:text-primary">
+                    <i class="fa-solid fa-bars text-2xl"></i>
+                </button>
+            </div>
+            
+            <!-- 移动端导航菜单 -->
+            <div id="mobileMenu" class="md:hidden hidden pb-4">
+                <nav class="flex flex-col space-y-3">
+                    <a href="#home" class="text-gray-700 hover:text-primary font-medium py-2 text-left">首页</a>
+                    <a href="#departments" class="text-gray-700 hover:text-primary font-medium py-2">科室介绍</a>
+                    <a href="#appointment" class="text-gray-700 hover:text-primary font-medium py-2">问诊时间</a>
+                    <a href="#recruitment" class="text-gray-700 hover:text-primary font-medium py-2">招聘信息</a>
+                    <div class="flex items-center space-x-2 pt-2 border-t border-gray-200">
+                        <i class="fa-solid fa-phone-volume text-secondary"></i>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- 首页横幅 - 修改标题为左对齐 -->
+    <section id="home" class="relative h-[70vh] min-h-[500px] bg-cover bg-center" style="background-image: url('C:/Users/华为/OneDrive/Desktop/hospital/科室二维码/图片1.jpg');"
+        <div class="absolute inset-0 bg-black/50"></div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-full flex items-center">
+
+           <div class="max-w-2xl text-left">
+              <h1 class="text-[clamp(2rem,5vw,3.5rem)] font-bold mb-4 text-shadow text-black">
+             用心守护 每一次健康托付
+              </h1>
+              <p class="text-[clamp(1rem,2vw,1.25rem)] mb-8 text-gray-800">
+               唐山华夏中西医结合医院拥有专业的医疗团队、先进的诊疗设备，为您和家人提供全方位的健康保障
+              </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- 医院简介 -->
+    <section class="py-16 bg-neutral">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-[clamp(1.5rem,3vw,2.5rem)] font-bold text-gray-800 mb-4">关于我们</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="hover-scale">
+                    <img src="C:\Users\华为\OneDrive\Desktop\hospital\科室二维码\图片二.jpg" alt="医院环境" class="rounded-lg shadow-lg w-full h-auto">
+                </div>
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">唐山华夏中西医结合医院 - 您身边的健康守护者</h3>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        唐山华夏中西医结合医院（原称：唐山中西医专科医院）成立于1991年，是经唐山市卫生健康委员会直属管理的非营利性医疗机构，现为医保门诊定点单位。2011年，医院迁址至唐山市路北区华岩园西街1号，至今已有三十余年发展历史。
+                    </p>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        医院坚持中西医结合的发展道路，拥有一支专业的医护团队，主要运用中成药及中医适宜技术开展诊疗服务。目前开放床位20张，门诊科室设置齐全，涵盖多个特色诊疗领域
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        医院曾多次获得“社会办医先进单位”、“物价计量信得过单位”等荣誉称号，并曾担任唐山市老年保健协会理事单位。作为中国民族医药协会健康科普分会的“肿瘤（癌症）科普工程帮扶工作站”，以及国家高级视力康复师培训招生点，医院在特色专科建设和健康科普方面持续深耕，已成为全国特色诊疗机构之一。
+                    </p>
+                    <p class="text-gray-600 mb-4 leading-relaxed">
+                        展望未来，唐山华夏中西医结合医院将继续坚持特色发展道路，秉承“传承中医、融合西医、服务百姓”的宗旨，致力于为患者解除病痛，推动中医药事业的传承与创新。
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 科室介绍 - 调整尺寸优化版 -->
+    <section id="departments" class="py-12 md:py-16 bg-gray-50/50">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8 md:mb-10">
+                <h2 class="text-[clamp(1.25rem,3vw,2rem)] font-bold text-gray-800 mb-3">科室介绍</h2>
+                <div class="w-16 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
+                    我院各科室按楼层分布，配备专属诊疗电话，涵盖西医内科、肿瘤科、妇科、外科、中医科、中西医结合科、预防保健科等特色诊疗领域。
+                </p>
+            </div>
+
+            <!-- 楼层提示（精简尺寸） -->
+            <div class="max-w-4xl mx-auto mb-6 bg-primary/5 p-3 rounded-lg border border-primary/20">
+                <p class="text-gray-700 text-sm md:text-base font-medium"><i class="fa-solid fa-map-signs text-primary mr-2"></i> 科室楼层分布：一层（西医内科）、二层（综合科室）、三层（中医科）</p>
+            </div>
+            
+            <!-- 竖向列表容器（缩小间距） -->
+            <div class="grid grid-cols-1 gap-5 max-w-4xl mx-auto">
+            
+                <!-- 西医内科（一层） -->
+                <div class="bg-white rounded-lg shadow-sm hover-scale overflow-hidden flex flex-col md:flex-row max-h-48 md:max-h-40">
+                    <!-- 左侧图片（固定高度） -->
+                    <div class="w-full md:w-1/4 h-32 md:h-full">
+                        <img src="C:\Users\华为\OneDrive\Desktop\hospital\科室二维码\西医内科.jpg" alt="西医内科" class="w-full h-full object-cover">
+                    </div>
+                    <!-- 右侧文字（精简内边距） -->
+                    <div class="w-full md:w-3/4 p-4 flex flex-col justify-center">
+                        <div class="flex items-center mb-1">
+                            <h3 class="text-lg font-bold text-gray-800">西医内科</h3>
+                            <span class="ml-2 bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">一层</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2 flex-1 line-clamp-2">打针、输液，专治西医内科各类常见疾病。</p>
+                        <div class="flex items-center text-gray-700 text-sm">
+                            <i class="fa-solid fa-phone text-secondary mr-1 text-sm"></i>
+                            <span>15033922961</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 肿瘤科（二层） -->
+                <div class="bg-white rounded-lg shadow-sm hover-scale overflow-hidden flex flex-col md:flex-row max-h-48 md:max-h-40">
+                    <div class="w-full md:w-1/4 h-32 md:h-full">
+                        <img src="C:\Users\华为\OneDrive\Desktop\hospital\科室二维码\肿瘤科.jpg" alt="肿瘤科" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full md:w-3/4 p-4 flex flex-col justify-center">
+                        <div class="flex items-center mb-1">
+                            <h3 class="text-lg font-bold text-gray-800">肿瘤科</h3>
+                            <span class="ml-2 bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">二层</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2 flex-1 line-clamp-2">专治各种恶性肿瘤，确诊后可服用振国中成药改善身体情况。</p>
+                        <div class="flex items-center text-gray-700 text-sm">
+                            <i class="fa-solid fa-phone text-secondary mr-1 text-sm"></i>
+                            <span>7250555</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 妇科（二层） -->
+                <div class="bg-white rounded-lg shadow-sm hover-scale overflow-hidden flex flex-col md:flex-row max-h-48 md:max-h-40">
+                    <div class="w-full md:w-1/4 h-32 md:h-full">
+                        <img src="C:\Users\华为\OneDrive\Desktop\hospital\科室二维码\妇科.jpg" alt="妇科" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full md:w-3/4 p-4 flex flex-col justify-center">
+                        <div class="flex items-center mb-1">
+                            <h3 class="text-lg font-bold text-gray-800">妇科</h3>
+                            <span class="ml-2 bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">二层</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2 flex-1 line-clamp-2">专治妇科疾病、不孕不育症。</p>
+                        <div class="flex items-center text-gray-700 text-sm">
+                            <i class="fa-solid fa-phone text-secondary mr-1 text-sm"></i>
+                            <span>2029889</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 外科（二层） -->
+                <div class="bg-white rounded-lg shadow-sm hover-scale overflow-hidden flex flex-col md:flex-row max-h-48 md:max-h-40">
+                    <div class="w-full md:w-1/4 h-32 md:h-full">
+                        <img src="C:\Users\华为\OneDrive\Desktop\hospital\科室二维码\外科.jpg" alt="外科" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full md:w-3/4 p-4 flex flex-col justify-center">
+                        <div class="flex items-center mb-1">
+                            <h3 class="text-lg font-bold text-gray-800">外科</h3>
+                            <span class="ml-2 bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">二层</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2 flex-1 line-clamp-2">专治静脉曲张、静脉炎、脉管炎及小腿溃疡。</p>
+                        <div class="flex items-center text-gray-700 text-sm">
+                            <i class="fa-solid fa-phone text-secondary mr-1 text-sm"></i>
+                            <span>2778033</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 中医科1（二层） -->
+                <div class="bg-white rounded-lg shadow-sm hover-scale overflow-hidden flex flex-col md:flex-row max-h-48 md:max-h-40">
+                    <div class="w-full md:w-1/4 h-32 md:h-full">
+                        <img src="C:\Users\华为\OneDrive\Desktop\hospital\科室二维码\中医2.jpg" alt="中医科（二层）" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full md:w-3/4 p-4 flex flex-col justify-center">
+                        <div class="flex items-center mb-1">
+                            <h3 class="text-lg font-bold text-gray-800">中医科（1）</h3>
+                            <span class="ml-2 bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">二层</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2 flex-1 line-clamp-2">专治失眠、疝气、鼻炎。</p>
+                        <div class="flex items-center text-gray-700 text-sm">
+                            <i class="fa-solid fa-phone text-secondary mr-1 text-sm"></i>
+                            <span>7250587</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 中西医结合科（二层） -->
+                <div class="bg-white rounded-lg shadow-sm hover-scale overflow-hidden flex flex-col md:flex-row max-h-48 md:max-h-40">
+                    <div class="w-full md:w-1/4 h-32 md:h-full">
+                        <img src="C:\Users\华为\OneDrive\Desktop\hospital\科室二维码\中西医结合科.png" alt="中西医结合科" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full md:w-3/4 p-4 flex flex-col justify-center">
+                        <div class="flex items-center mb-1">
+                            <h3 class="text-lg font-bold text-gray-800">中西医结合科</h3>
+                            <span class="ml-2 bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">二层</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2 flex-1 line-clamp-2">针灸、中药治疗骨关节痛、风湿类风湿、湿疹、痤疮、胃肠等疾病。</p>
+                        <div class="flex items-center text-gray-700 text-sm">
+                            <i class="fa-solid fa-phone text-secondary mr-1 text-sm"></i>
+                            <span>2173765</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 预防保健科（二层） -->
+                <div class="bg-white rounded-lg shadow-sm hover-scale overflow-hidden flex flex-col md:flex-row max-h-48 md:max-h-40">
+                    <div class="w-full md:w-1/4 h-32 md:h-full">
+                        <img src="C:\Users\华为\OneDrive\Desktop\hospital\科室二维码\预防保健推拿.jpg" alt="预防保健科" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full md:w-3/4 p-4 flex flex-col justify-center">
+                        <div class="flex items-center mb-1">
+                            <h3 class="text-lg font-bold text-gray-800">预防保健科</h3>
+                            <span class="ml-2 bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">二层</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2 flex-1 line-clamp-2">预防保健推拿，提供健康防护及保健服务。</p>
+                        <div class="flex items-center text-gray-700 text-sm">
+                            <i class="fa-solid fa-phone text-secondary mr-1 text-sm"></i>
+                            <span>18714131957</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 中医科（三层）- 长文本适配 -->
+                <div class="bg-white rounded-lg shadow-sm hover-scale overflow-hidden flex flex-col md:flex-row max-h-56 md:max-h-48">
+                    <div class="w-full md:w-1/4 h-32 md:h-full">
+                        <img src="C:\Users\华为\OneDrive\Desktop\hospital\科室二维码\中医2.jpg" alt="中医科（三层）" class="w-full h-full object-cover">
+                    </div>
+                    <div class="w-full md:w-3/4 p-4 flex flex-col justify-center">
+                        <div class="flex items-center mb-1">
+                            <h3 class="text-lg font-bold text-gray-800">中医科</h3>
+                            <span class="ml-2 bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded-full">三层</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-2 flex-1 line-clamp-3">主治心血管狭窄、心衰、抑郁症、各种皮肤溃烂不愈合、白癜风、牛皮癣、红斑狼疮。</p>
+                        <div class="flex items-center text-gray-700 text-sm">
+                            <i class="fa-solid fa-phone text-secondary mr-1 text-sm"></i>
+                            <span>18513131933</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 门诊时间与出诊安排板块 -->
+    <section id="appointment" class="py-12 md:py-16 bg-neutral">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10 md:mb-12">
+                <h2 class="text-[clamp(1.25rem,3vw,2rem)] font-bold text-gray-800 mb-3">门诊时间与出诊安排</h2>
+                <div class="w-16 h-1 bg-primary mx-auto mb-4"></div>
+                <p class="text-gray-600 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
+                    我院门诊时间分夏令时与冬令时，各科室出诊安排不同，建议就诊前电话确认
+                </p>
+            </div>
+
+            <!-- 门诊开诊时间 -->
+            <div class="max-w-4xl mx-auto mb-8 bg-white rounded-lg shadow-sm p-6 hover-scale">
+                <h3 class="text-xl font-bold text-gray-800 mb-4 flex items-center">
+                    <i class="fa-solid fa-clock text-primary mr-2"></i> 门诊开诊时间
+                </h3>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- 夏令时 -->
+                    <div class="border-l-4 border-primary pl-4">
+                        <h4 class="font-bold text-gray-800 mb-2">夏令时（5月1日 - 9月30日）</h4>
+                        <ul class="text-gray-600 space-y-1">
+                            <li><span class="font-medium">上午：</span>8:30 - 11:30</li>
+                            <li><span class="font-medium">下午：</span>14:00 - 17:30</li>
+                        </ul>
+                    </div>
+                    <!-- 冬令时 -->
+                    <div class="border-l-4 border-primary pl-4">
+                        <h4 class="font-bold text-gray-800 mb-2">冬令时（10月1日 - 次年4月30日）</h4>
+                        <ul class="text-gray-600 space-y-1">
+                            <li><span class="font-medium">上午：</span>8:30 - 11:30</li>
+                            <li><span class="font-medium">下午：</span>13:30 - 17:00</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 各科室出诊安排 -->
+            <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-sm overflow-hidden hover-scale">
+                <h3 class="text-xl font-bold text-gray-800 p-6 border-b border-gray-100 flex items-center">
+                    <i class="fa-solid fa-user-doctor text-primary mr-2"></i> 各科室出诊安排及联系方式
+                </h3>
+                
+                <!-- 响应式表格 -->
+                <div class="overflow-x-auto">
+                    <table class="w-full text-sm text-left">
+                        <thead class="bg-gray-50 text-gray-700 font-medium">
+                            <tr>
+                                <th class="px-6 py-3">科室</th>
+                                <th class="px-6 py-3">出诊时间</th>
+                                <th class="px-6 py-3">诊疗范围及预约电话</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-100">
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium">西医内科</td>
+                                <td class="px-6 py-4">全天</td>
+                                <td class="px-6 py-4">打针、输液，专治西医内科疾病。<br>电话：15033922961</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium">肿瘤科</td>
+                                <td class="px-6 py-4">全天</td>
+                                <td class="px-6 py-4">专治各种恶性肿瘤。<br>电话：7250555</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium">妇科</td>
+                                <td class="px-6 py-4">全天</td>
+                                <td class="px-6 py-4">专治妇科疾病、不孕不育症。<br>电话：2029889</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium">外科</td>
+                                <td class="px-6 py-4">周一、三、五上午</td>
+                                <td class="px-6 py-4">专治静脉曲张、静脉炎、脉管炎及小腿溃疡。<br>电话：2778033</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium">中医科（1）</td>
+                                <td class="px-6 py-4">全天</td>
+                                <td class="px-6 py-4">专治失眠、疝气、鼻炎。<br>电话：7250587</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium">中西医结合科</td>
+                                <td class="px-6 py-4">全天</td>
+                                <td class="px-6 py-4">针灸、中药治疗骨关节痛、风湿类风湿、湿疹、痤疮、胃肠等疾病。<br>电话：2173765</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium">中医科</td>
+                                <td class="px-6 py-4">需提前预约</td>
+                                <td class="px-6 py-4">电话：18910700886</td>
+                            </tr>
+                            <tr class="hover:bg-gray-50">
+                                <td class="px-6 py-4 font-medium">预防保健科</td>
+                                <td class="px-6 py-4">需提前预约</td>
+                                <td class="px-6 py-4">预防保健推拿。<br>电话：18714131957</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                
+                <!-- 备注说明 -->
+                <div class="p-6 bg-gray-50 text-gray-600 text-sm">
+                    <p class="mb-2"><i class="fa-solid fa-info-circle text-primary mr-2"></i> 备注：“全天”指在门诊开诊时间内均有医生出诊。</p>
+                    <p class="text-red-500 font-medium"><i class="fa-solid fa-exclamation-triangle mr-2"></i> 出诊时间如有临时调整，以医院当日实际安排为准，建议就诊前电话确认。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- 新增：招聘信息板块 - 统一联系方式版 -->
+<section id="recruitment" class="py-12 md:py-16 bg-gray-50/50">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-10 md:mb-12">
+            <h2 class="text-[clamp(1.25rem,3vw,2rem)] font-bold text-gray-800 mb-3">人才招聘</h2>
+            <div class="w-16 h-1 bg-primary mx-auto mb-4"></div>
+            <p class="text-gray-600 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
+                我院因业务发展需要，现面向社会公开招聘以下医疗相关专业人才，欢迎有志之士加入我们的团队
+            </p>
+        </div>
+
+        <!-- 单个容器整合所有岗位 + 统一联系方式 -->
+        <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-sm hover-scale overflow-hidden">
+            <!-- 标题栏 -->
+            <h3 class="text-xl font-bold text-gray-800 p-6 border-b border-gray-100 flex items-center">
+                <i class="fa-solid fa-user-tie text-primary mr-2"></i> 招聘岗位及要求
+            </h3>
+            
+            <!-- 岗位列表 -->
+            <div class="p-6">
+                <!-- 所有岗位信息整合 -->
+                <div class="space-y-6 mb-8">
+                    <!-- 护士岗位 -->
+                    <div class="border-l-4 border-green-500 pl-4 py-2">
+                        <div class="flex flex-wrap justify-between items-center mb-2">
+                            <h4 class="text-lg font-bold text-gray-800">护士 <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full ml-2">急聘</span></h4>
+                            <span class="text-sm text-gray-500"><i class="fa-solid fa-briefcase text-primary mr-1"></i> 全职 | <i class="fa-solid fa-location-dot text-primary mr-1"></i> 唐山·路北区 | <i class="fa-solid fa-yen-sign text-primary mr-1"></i> 薪资面议</span>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-1 text-sm">岗位要求：</h5>
+                            <p class="text-gray-600 text-sm">五官端正、熟练操作输液技术、具有护士资格证书</p>
+                        </div>
+                    </div>
+
+                    <!-- 医师岗位 -->
+                    <div class="border-l-4 border-blue-500 pl-4 py-2">
+                        <div class="flex flex-wrap justify-between items-center mb-2">
+                            <h4 class="text-lg font-bold text-gray-800">医师 <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full ml-2">招聘中</span></h4>
+                            <span class="text-sm text-gray-500"><i class="fa-solid fa-briefcase text-primary mr-1"></i> 全职 | <i class="fa-solid fa-location-dot text-primary mr-1"></i> 唐山·路北区 | <i class="fa-solid fa-yen-sign text-primary mr-1"></i> 薪资面议</span>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-1 text-sm">岗位要求：</h5>
+                            <p class="text-gray-600 text-sm">具有执业医师证书、能独立开诊、能够管理科室</p>
+                        </div>
+                    </div>
+
+                    <!-- 推拿师岗位 -->
+                    <div class="border-l-4 border-blue-500 pl-4 py-2">
+                        <div class="flex flex-wrap justify-between items-center mb-2">
+                            <h4 class="text-lg font-bold text-gray-800">推拿师 <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full ml-2">招聘中</span></h4>
+                            <span class="text-sm text-gray-500"><i class="fa-solid fa-briefcase text-primary mr-1"></i> 灵活就业 | <i class="fa-solid fa-location-dot text-primary mr-1"></i> 唐山·路北区 | <i class="fa-solid fa-yen-sign text-primary mr-1"></i> 薪资面议</span>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-1 text-sm">岗位要求：</h5>
+                            <p class="text-gray-600 text-sm">熟练掌握推拿技术、工作时间自由</p>
+                        </div>
+                    </div>
+
+                    <!-- 超声医师岗位 -->
+                    <div class="border-l-4 border-blue-500 pl-4 py-2">
+                        <div class="flex flex-wrap justify-between items-center mb-2">
+                            <h4 class="text-lg font-bold text-gray-800">超声医师 <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full ml-2">招聘中</span></h4>
+                            <span class="text-sm text-gray-500"><i class="fa-solid fa-briefcase text-primary mr-1"></i> 可兼职 | <i class="fa-solid fa-location-dot text-primary mr-1"></i> 唐山·路北区 | <i class="fa-solid fa-yen-sign text-primary mr-1"></i> 薪资面议</span>
+                        </div>
+                        <div>
+                            <h5 class="font-bold text-gray-800 mb-1 text-sm">岗位要求：</h5>
+                            <p class="text-gray-600 text-sm">熟练操作影像超声技术、可接受兼职</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 统一的联系方式 + 招聘说明 -->
+                <div class="bg-primary/5 rounded-lg p-5 border border-primary/20">
+                    <h4 class="font-bold text-gray-800 mb-3 flex items-center">
+                        <i class="fa-solid fa-phone-volume text-primary mr-2"></i> 联系方式及说明
+                    </h4>
+                    <div class="text-gray-700 space-y-2 text-sm">
+                        <p><i class="fa-solid fa-user text-primary mr-1"></i> 联系人：梁女士</p>
+                        <p><i class="fa-solid fa-phone text-primary mr-1"></i> 联系电话：18714131957</p>
+                        <hr class="border-gray-200 my-2">
+                        <p><i class="fa-solid fa-circle-info text-primary mr-1"></i> 1. 所有岗位薪资待遇均面议，具体根据个人能力及经验确定</p>
+                        <p><i class="fa-solid fa-circle-info text-primary mr-1"></i> 2. 有意者可直接联系上述电话，面试地址：唐山市路北区华岩园西街1号唐山华夏中西医结合医院</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- 页脚 -->
+    <footer class="bg-gray-800 text-white py-12">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <i class="fa-solid fa-hospital text-primary text-2xl"></i>
+                        <span class="text-xl font-bold">唐山华夏中西医结合医院</span>
+                    </div>
+                    <p class="text-gray-400 mb-4">
+                        用心守护每一次健康托付，为您和家人的健康保驾护航。
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa-brands fa-weixin text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa-brands fa-weibo text-xl"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                            <i class="fa-brands fa-qq text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">快速链接</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#home" class="text-gray-400 hover:text-white transition-colors">首页</a></li>
+                        <li><a href="#departments" class="text-gray-400 hover:text-white transition-colors">科室介绍</a></li>
+                        <li><a href="#appointment" class="text-gray-400 hover:text-white transition-colors">问诊时间</a></li>
+                        <li><a href="#recruitment" class="text-gray-400 hover:text-white transition-colors">招聘信息</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h4 class="text-lg font-bold mb-4">科室导航</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">西医内科</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">肿瘤科</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">妇科</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">外科</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">中医科（1）</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">中西医结合科</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">预防保健科</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition-colors">中医科</a></li>
+                    </ul>
+                </div>
+                
+            </div>
+            
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // 移动端菜单切换
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // 平滑滚动
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // 关闭移动端菜单
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // 滚动时导航栏样式变化
+        window.addEventListener('scroll', () => {
+            const header = document.querySelector('header');
+            if (window.scrollY > 50) {
+                header.classList.add('py-2');
+                header.classList.remove('py-4');
+            } else {
+                header.classList.add('py-4');
+                header.classList.remove('py-2');
+            }
+        });
+    </script>
+</body>
+</html>
